@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Netflix IMDb Filter</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="background-animation"></div>
+  <div class="popup-container">
+    <header class="header">
+      <div class="logo">
+        <span class="netflix-text">NETFLIX</span>
+        <span class="imdb-text">IMDb Filter</span>
+      </div>
+    </header>
+
+    <main class="content">
+      <form class="filter-form" onsubmit="return false;">
+        <div class="form-group">
+          <label for="minRating" class="form-label">Minimum IMDb Rating</label>
+          <div class="input-wrapper">
+            <input
+              type="number"
+              id="minRating"
+              min="0"
+              max="10"
+              step="0.1"
+              value="7.0"
+              class="rating-input"
+            />
+            <span class="rating-suffix">/10</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="genre" class="form-label">Genre</label>
+          <select id="genre" class="genre-select">
+            <option value="">Any</option>
+            <option value="Action">Action</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Animation">Animation</option>
+            <option value="Biography">Biography</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Crime">Crime</option>
+            <option value="Documentary">Documentary</option>
+            <option value="Drama">Drama</option>
+            <option value="Family">Family</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Film-Noir">Film-Noir</option>
+            <option value="History">History</option>
+            <option value="Horror">Horror</option>
+            <option value="Music">Music</option>
+            <option value="Musical">Musical</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Romance">Romance</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+            <option value="Sport">Sport</option>
+            <option value="Thriller">Thriller</option>
+            <option value="War">War</option>
+            <option value="Western">Western</option>
+          </select>
+        </div>
+
+        <button type="button" id="save" class="save-button">Save & Apply</button>
+        <div id="status" class="status-message" aria-live="polite"></div>
+      </form>
+    </main>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

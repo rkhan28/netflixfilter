@@ -1,0 +1,19 @@
+# Node / build artifacts (if you later add a build step)
+node_modules/
+dist/
+build/
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Private keys & API keys
+# Important: prevent accidental commit of your OMDb key
+background.js.local
+*.env
+*.key
+*.secret
+
+# If you keep an un-committed copy with your real OMDb key:
+background.local.js
